@@ -5,6 +5,18 @@
 	color: #343F57;
 }
 
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		/*transform: translateX(-100%);*/
+	}
+
+	100% {
+		opacity: 100%;
+		/*transform: translateX(0);*/
+	}
+}
+
 /*	Pocetak navigacije i hero sekcije	*/
 
 .nav-hero{
@@ -14,6 +26,8 @@
 	background-image: url('/img/cover.jpg');
 	background-position: center;
 	background-size: cover;
+	height: 100vh;
+	animation: fade-in 1000ms ease-in-out;
 }
 .nav{
 	display: flex;
@@ -37,14 +51,31 @@
 .navigacija a{
 	text-transform: uppercase;
 	font-weight: 600;
-	padding: 0.5em 1em;
+	padding: 0.5em 2em;
 	text-decoration: none;
+}
+
+.navigacija > a:link,
+.navigacija > a:visited {
+	display: inline-block;
+	font-size: 1rem;
+	text-decoration: none;
+	color: #343F57;
+	text-transform: uppercase;
+	background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #343F57 50%);
+	background-size: 230%;
+	transition: all .5s
+}
+.navigacija > a:hover {
+	background-position: 100%;
+	color: #FFF;
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2)
 }
 
 /*	Hero sekcija unutar navigacije	*/
 
 .hero{
-	padding: 15em 0 10em 0;
+	padding: 15em 0 14em 0;
 }
 .hero h1{
 	font-size: 7em;
@@ -92,7 +123,7 @@
 	border-bottom: 5px solid #343F57;
 	background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #343F57 50%);
 	background-size: 230%;
-	transition: all .3s
+	transition: all .5s
 }
 .dugme1:hover {
 	background-position: 100%;
@@ -111,7 +142,7 @@
 }
 .blok{
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	gap: 10em;
 	padding: 5em 0;
@@ -140,8 +171,10 @@
 	transition: 250ms;
 }
 .dugme2:hover {
-	border-radius: 0;
+	background-color: #343f57;
+	color: #FFD936;
 	transition: 250ms;
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2)
 }
 
 /*	Skecija o knjigama i cd-u	*/
@@ -200,18 +233,18 @@
 	display: inline-block;
 	font-size: 1rem;
 	text-decoration: none;
-	color: #FFD936;
+	color: #343f57;
 	padding: 1.5rem 3rem;
 	text-transform: uppercase;
 	border-bottom: 5px solid #FFD936;
 	background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #FFD936 50%);
 	background-size: 230%;
-	transition: all .3s
+	transition: all .5s
 }
 .zuto-dugme:hover {
 	background-position: 100%;
 	color: #FFF;
-	transform: translateX(1rem);
+	/*transform: translateX(1rem);*/
 	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2)
 }
 
@@ -234,8 +267,8 @@
 	margin: 1em 0;
 }
 .slika h3{
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 	font-weight: 400;
 }
 .slika img{
@@ -284,7 +317,7 @@
 	border-bottom: 5px solid white;
 	background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
 	background-size: 230%;
-	transition: all .3s
+	transition: all .5s
 }
 .dugme-autor:hover {
 	background-position: 100%;
@@ -319,11 +352,14 @@
 	margin: 5em 0;
 }
 .forma{
-	width: 70%;
+	width: 40%;
 	margin: 0 auto;
 	display: flex;
+	padding: 1em;
 	justify-content: center;
 	flex-direction: column;
+	border-left: 1px solid #FFD936;
+	border-right: 1px solid #FFD936;
 }
 .forma > input{
 	height: 50px;
@@ -331,18 +367,25 @@
 	border-left: none;
 	border-right: none;
 	border-bottom: 1px solid lightgray;
+	border-radius: 5px;
+	transition: 500ms;
 }
 input:focus{
 	outline: none;
+	border-bottom: 1px solid #FFD936;
+	transition: 500ms;
 }
 #forma-text{
-	height: 250px;
+	height: 150px;
 	border: none;
 	border-bottom: 1px solid lightgray;
+	border-radius: 5px;
 	padding: 1em 0 0 0;
+	resize: vertical;
 }
 #forma-text:focus{
 	outline: none;
+	border-bottom: 1px solid #FFD936;
 }
 
 /*	Dugme submit	*/
@@ -357,6 +400,13 @@ input:focus{
 	border-radius: 50px;
 	font-weight: 700;
 	cursor: pointer;
+	transition: 250ms;
+}
+.submit-button:hover {
+	background-color: #343f57;
+	color: #FFD936;
+	transition: 250ms;
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2)
 }
 
 /*	Foter sekcija	*/
@@ -379,3 +429,24 @@ input:focus{
 	height: 80px;
 }
 
+/*MEDIA QUERY*/
+@media screen and (max-width: 1570px) {
+	.blok{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		gap: 5em;
+		padding: 5em 0;
+	}
+}
+
+@media screen and (max-width: 1070px) {
+	.blok{
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: row;
+		align-items: center;
+		gap: 5em;
+		padding: 5em 0;
+	}
+}
