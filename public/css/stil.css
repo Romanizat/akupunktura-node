@@ -1,0 +1,381 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	color: #343F57;
+}
+
+/*	Pocetak navigacije i hero sekcije	*/
+
+.nav-hero{
+	display: block;
+	justify-content: center;
+	text-align: center;
+	background-image: url('/img/cover.jpg');
+	background-position: center;
+	background-size: cover;
+}
+.nav{
+	display: flex;
+	justify-content: space-between;
+	width: 70%;
+	margin: 0 auto;
+	align-items: center;
+	padding-top: 25px;
+}
+.nav img{
+	height: 30px;
+}
+.nav .logo{
+	height: 80px;
+}
+.navigacija{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navigacija a{
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 0.5em 1em;
+	text-decoration: none;
+}
+
+/*	Hero sekcija unutar navigacije	*/
+
+.hero{
+	padding: 15em 0 10em 0;
+}
+.hero h1{
+	font-size: 7em;
+	padding: 20px 0;
+	font-family: 'Bitter',serif;
+}
+.hero .hero-text p{
+	font-weight: 700;
+	padding: 3px;
+	font-size: 0.9em;
+}
+.hero-text{
+	margin-bottom: 25px;
+}
+.social-h{
+	text-align: right;
+	width: 70%;
+	margin: 0 auto;
+	padding-bottom: 5em;
+}
+.social-h a{
+	padding-left: 1em;
+}
+.social-h a img{
+	height: 30px;
+}
+
+/*	Dugme samo za hero sekciju	*/
+
+.dugme1{
+	text-decoration: none;
+	font-weight: 700;
+	border-bottom: 5px solid #343F57;
+	padding: 10px 36px 10px 36px;
+	font-size: 1.2em;
+}
+.dugme1:link,
+.dugme1:visited {
+	display: inline-block;
+	font-size: 1rem;
+	text-decoration: none;
+	color: #343F57;
+	padding: 1.5rem 3rem;
+	text-transform: uppercase;
+	border-bottom: 5px solid #343F57;
+	background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #343F57 50%);
+	background-size: 230%;
+	transition: all .3s
+}
+.dugme1:hover {
+	background-position: 100%;
+	color: #FFF;
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2)
+}
+
+/*	Sekcija o Akupunkturi	*/
+
+.istorija{
+	width: 70%;
+	margin: 0 auto;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+}
+.blok{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10em;
+	padding: 5em 0;
+}
+.text h1,.text2 h1{
+	margin-bottom: 1em;
+	font-family: 'Bitter',serif;
+	border-bottom: 5px solid #FFD936;
+	padding-bottom: 0.5em;
+	width: fit-content;
+	font-size: 2.5em;
+}
+.text p,.text2 p{
+	margin-bottom: 50px;
+	text-align: left;
+	max-width: 650px;
+}
+
+/*	Dugme sa pozadinom	*/
+
+.dugme2{
+	background-color: #FFD936;
+	padding: 1em 3em;
+	border-radius: 15px;
+	text-decoration: none;
+	transition: 250ms;
+}
+.dugme2:hover {
+	border-radius: 0;
+	transition: 250ms;
+}
+
+/*	Skecija o knjigama i cd-u	*/
+
+.knjige-cd-inner{
+	display: flex;
+	justify-content: center;
+	width: 70%;
+	margin: 0 auto 5em auto;
+}
+.knjige-cd h1{
+	text-align: center;
+	margin: 2em auto;
+	border-bottom: 5px solid #FFD936;
+	padding: 0 1em 0.5em 1em;
+	width: fit-content;
+	font-family: 'Bitter',serif;
+	font-size: 3em;
+}
+.knjiga{
+	padding: 1em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+}
+.knjiga p{
+	margin-bottom: 0.5em;
+	line-height: 22px;
+	text-align: center;
+	padding: 0 0.5em;
+}
+.knjiga h2{
+	margin: 1em 0;
+	font-family: 'Bitter',serif;
+}
+.cd{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	justify-content: space-around;
+}
+/*	Zuto dugme	*/
+
+.zuto-dugme{
+	margin: 1em auto;
+	padding: 0.5em 1em 0.5em 1em;
+	border-bottom: 5px solid #FFD936;
+	width: fit-content;
+	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
+}
+.zuto-dugme:link,
+.zuto-dugme:visited {
+	display: inline-block;
+	font-size: 1rem;
+	text-decoration: none;
+	color: #FFD936;
+	padding: 1.5rem 3rem;
+	text-transform: uppercase;
+	border-bottom: 5px solid #FFD936;
+	background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #FFD936 50%);
+	background-size: 230%;
+	transition: all .3s
+}
+.zuto-dugme:hover {
+	background-position: 100%;
+	color: #FFF;
+	transform: translateX(1rem);
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2)
+}
+
+/*	Citat sekcija	*/
+
+.citat{
+	background-color: rgba(82,104,64,0.05);
+	text-align: center;
+	padding: 5em 0;
+}
+.citat-inner{
+	width: 60%;
+	margin: 0 auto;
+	line-height: 40px;
+}
+.citat-inner h1{
+	font-weight: 400;
+	font-family: 'Bitter', serif;
+	font-style: italic;
+	margin: 1em 0;
+}
+.slika h3{
+	padding: 0px;
+	margin: 0px;
+	font-weight: 400;
+}
+.slika img{
+	max-height: 100%;
+}
+
+/*	Sekcija o autoru	*/
+
+.autor{
+	text-align: center;
+	padding: 10em 0;
+	background-image: url('/img/cover-2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+}
+.autor h1{;
+	font-family: 'Bitter',serif;
+	font-size: 4em;
+	color: white;
+}
+.autor-p{
+	margin: 2em 0;
+}
+.autor-p > p{
+	color: white !important;
+	width: 40%;
+	margin: 0 auto;
+	line-height: 25px;
+}
+.dugme-autor{
+	padding: 0.5em 1.5em;
+	color: white;
+	border-bottom: 5px solid white;
+	text-decoration: none;
+}
+.dugme-autor:link,
+.dugme-autor:visited {
+	display: inline-block;
+	font-size: 1rem;
+	text-decoration: none;
+	color: white;
+	padding: 1.5rem 3rem;
+	text-transform: uppercase;
+	border-bottom: 5px solid white;
+	background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+	background-size: 230%;
+	transition: all .3s
+}
+.dugme-autor:hover {
+	background-position: 100%;
+	color: #bc805d;
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2)
+}
+
+/*	Sekcija za pitanja	*/
+
+.pitanja{
+	text-align: center;
+}
+.pitanja h1{
+	font-family: 'Birro', serif;
+	font-size: 3.5em;
+	margin: 1em 0;
+}
+.pitanja-inner{
+	text-align: left;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2em;
+}
+.lista{
+	line-height: 30px;
+}
+
+/*	Sekcija za email formu	*/
+
+.email-forma{
+	text-align: center;
+	margin: 5em 0;
+}
+.forma{
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.forma > input{
+	height: 50px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid lightgray;
+}
+input:focus{
+	outline: none;
+}
+#forma-text{
+	height: 250px;
+	border: none;
+	border-bottom: 1px solid lightgray;
+	padding: 1em 0 0 0;
+}
+#forma-text:focus{
+	outline: none;
+}
+
+/*	Dugme submit	*/
+
+.submit-button{
+	text-align: center;
+	background-color: #FFD936;
+	border: none;
+	width: fit-content;
+	margin: 1em auto;
+	padding: 1em 3em;
+	border-radius: 50px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+/*	Foter sekcija	*/
+
+.footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 70%;
+	margin: 0 auto;
+	padding: 2em 0;
+}
+.footer img{
+	height: 30px;
+}
+.footer a{
+	margin-left: 0.5em;
+}
+.footer .logo{
+	height: 80px;
+}
+
